@@ -1,0 +1,10 @@
+<form action="{% url 'social:complete' backend=backend %}" method="post" role="form">
+    {% csrf_token %}
+    <div class="form-group">
+        {% if mobile %}
+        <label class="control-label" for="email">Mobile:</label>
+        <input class="form-control" id="mobile" type="text" name="mobile" value="" required /><br>
+        {% endif %}
+    </div>
+    <button type="submit">Submit</button>
+</form>

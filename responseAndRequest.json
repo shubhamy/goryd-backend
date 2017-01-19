@@ -1,0 +1,266 @@
+Listing requests:
+	1. /api/listing/address - POST
+    {
+      "street": "J-3/46, heritage City",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "pincode": 123333
+    }
+
+  2.  /api/listing/address/<pk> - PUT
+    {
+      "lat": 12.3,
+      "lon": 15.9
+    }
+
+  3. /api/listing/vehicle - POST
+    {
+      "model": 2,
+      "year": 2016,
+      "kms": 2000,
+      "gearType": "manual",
+      "address": 48,
+      "regNum": "MH07 3467"
+    }
+
+  3. /api/listing/vehicle/ - GET //getting all listing for a particular user
+
+  3. /api/listing/vehicle/<pk> - PUT
+    {
+      "isListingComplete": 1
+    }
+
+  3. /api/listing/vehicle/?pk=<pk> - GET // getting user's listed
+  {
+    "gearType": "manual",
+    "media": [
+      {
+        "id": 1,
+        "created": "2016-06-07T06:38:08.307033Z",
+        "link": "as",
+        "attachment": "/media/listing/media/1465281488_31_shubhamy2015gmail.com_2013_despicable_me_2_minions-1366x768.jpg",
+        "mediaType": "image",
+        "name": "shubhamy2015@gmail.com",
+        "user": 8,
+        "vehicle": 1
+      },
+      {
+        "id": 2,
+        "created": "2016-06-07T06:38:18.364944Z",
+        "link": "as",
+        "attachment": "/media/listing/media/1465281498_37_shubhamy2015gmail.com_2013_despicable_me_2_minions-1366x768.jpg",
+        "mediaType": "image",
+        "name": "shubhamy2015@gmail.com",
+        "user": 8,
+        "vehicle": 1
+      }
+    ],
+    "kms": 578,
+    "year": 2015,
+    "pk": 1,
+    "model": "i10",
+    "address": {
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "street": "J-3/46, heritage City"
+    },
+    "maker": "Hyundai",
+    "availabilities": [
+      "2016-03-15",
+      "2016-03-30"
+    ]
+  }
+
+  4. /api/listing/availability - POST
+    {
+      "vehicle": [4],
+      "priceweekday": 250,
+      "priceweekend": 400,
+      "dates": ["2016-03-15", "2016-03-16", "2016-03-28"]
+    }
+
+  5. /api/listing/media - POST
+    {
+      "vehicle": 4,
+      "attachment": "xyz"
+    }
+
+  6. /register/ - POST
+    data = {
+      "name": "Shubham Yadav",
+      "email": "shubhamy2015@gmail.com",
+      "password": "123",
+      "mobile": 9930467093
+    }
+    Response ->
+    onSuccess: {
+      "pk": 1 // User's pk
+    }
+
+    on resend OTP:
+    data = {
+      "pk": 1
+    }
+
+  7. /register/validateOTP/ - POST
+  data = {
+    "pk": 1,
+    "otp": 125647
+  }
+  response ->
+  onSuccess: login and 200 OK
+  onFail: {
+    "error": "Incorrect OTP"
+  }
+
+  8. /forgotPassword/ - POST (on resend OTP as well)
+  data = {
+    "mobile": "99342151351",
+  }
+  onSuccess: 200
+  onfail: {
+    "error": "user does not exist"
+  }
+
+  9. /forgotPassword/validateOTP/ - POST
+  data = {
+    "pk": 1,
+    "otp": "1234"
+  }
+  response -> login, 200
+  onFail: {
+    "error": "incorrect otp"
+  }
+
+  7. /rest-auth/login/ - POST
+  {
+    "username": "test@test.com",
+    "password": "123"
+  }
+
+  8. /api/listing/listingView/?lat=<lat>&lon=<lon>&start=<29-03-2016T13:06>&end=<29-03-2016T17:05> - GET
+  [
+    {
+    "weekdayPrice": 250,
+    "rating": 5,
+    "owner": {
+      "first_name": "Shubham",
+      "last_name": "Yadav",
+      "username": "shubhamy2015@gmail.com"
+    },
+    "media": [],
+    "pk": 2,
+    "model": "i10",
+    "address": {
+      "pk": 10,
+      "street": "Hostel 8, IIT Bombay",
+      "city": "Mumbai",
+      "state": "MH",
+      "pincode": 400076,
+      "lat": "12.3",
+      "lon": "15.9",
+      "createdBy": {
+        "pk": 8,
+        "first_name": "Shubham",
+        "last_name": "Yadav",
+        "username": "shubhamy2015@gmail.com"
+      }
+    },
+    "maker": "Tesla",
+    "weekendPrice": 400
+  },
+  ........
+]
+
+9. /api/users/profile/?mode=self - GET
+{
+  "pk": 4,
+  "user": {
+    "first_name": "Shubham",
+    "last_name": "Yadav",
+    "email": "shubhamy2015@gmail.com"
+  },
+  "address": {
+    "pk": 4,
+    "street": null,
+    "city": null,
+    "state": null,
+    "pincode": null
+  },
+  "myReviews": [
+    {
+      "reviewer": {
+        "first_name": "",
+        "last_name": "",
+        "email": "man@g.com"
+      },
+      "rating": 5,
+      "text": "43"
+    },
+    {
+      "reviewer": {
+        "first_name": "",
+        "last_name": "",
+        "email": "man@g.com"
+      },
+      "rating": 4,
+      "text": "sahgmfdnfgbh"
+    },
+    {
+      "reviewer": {
+        "first_name": "Sagar",
+        "last_name": "Agarwal",
+        "email": "s@s.com"
+      },
+      "rating": 5,
+      "text": "32yyjgfdfbnbdcecgb"
+    }
+  ],
+  "rating": 5,
+  "mobile": 9930467093,
+  "dp": "/media/ecommerce/DP/1465385671_51_shubhamy2015gmail.com_pic01.jpg",
+  "attachment": "/media/ecommerce/DL/1465385671_51_shubhamy2015gmail.com_2013_despicable_me_2_minions-1366x768.jpg",
+  "aboutMe": "I am cool"
+}
+
+10. /api/users/profile/<pk>/ - PUT
+{
+  "first_name": "Shubham", #can be blank but not null
+  "last_name": "Yadav", #can be blank but not null
+  "dp": null,
+  "attachment": null,
+  "mobile": "9930467093"
+}
+
+11. /api/booking/mybooking - POST
+{
+  "vehicle": "<pk>",
+  "from": "2016-06-19T13:04",
+  "to": "2016-06-24T15:10",
+  "status": "requested"
+}
+
+12. /api/booking/mybooking/<pk> - PUT
+if user == owner of vehicle
+{
+  "bookingId": "a897e9",
+  "status": "rejected", #or approved
+  "comment": ""
+}
+
+if user = renter of vehicle
+{
+    "bookingID": "asftee",
+    "status": "cancelled"
+}
+
+13. /api/booking/mybooking - GET - get all customers's bookings
+
+14. /api/booking/mybooking/?status=<status> - GET - get all customer's booking based on the status
+
+15. delete a media while edit listing
+  http://localhost:8000/api/listing/vehicle/pk/
+  data -> {
+    "pk": "media.pk",
+    "action": "delete"
+  }

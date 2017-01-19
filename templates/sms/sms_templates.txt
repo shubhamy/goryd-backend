@@ -1,0 +1,27 @@
+1. To customer, when a new booking is made:
+
+Dear 123,
+Thank you for booking with Goryd. Your booking id is 123 stands requested. You will receive a confirmation once the owner approves your request.
+To view/cancel your booking click: http://www.goryd.in. For help, please call us at +91-9930467093.
+
+2. To owner, when a new booking is made:
+
+Dear 123, 123 has requested to book your car. Please confirm it within 30 mins. Failing to do so will reject the request automatically. Click http://www.goryd.in.
+
+3. To customer, to provide the contact number of the owner:
+
+With reference to booking id 123, the contact number of owner is 123. Goryd.
+
+4. To customer, when the booking is approved by the owner:
+
+Dear 123, your booking id 123 has been approved.
+Booking ID: 123
+Your trip starts at: 123 at 123
+Your trip ends at: 123 at 123
+Car details: 123
+Total rent: 123
+Payment status: 123
+Map link: 123
+We will provide you the owner's contact number 6 hours before your trip begins. Please carry your driving license with you while picking your car. For help please call us at +91-9930467093.
+
+5. Your OTP is 123.

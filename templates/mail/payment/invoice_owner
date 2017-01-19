@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+    <body class="full-padding" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #fefefe;">
+        <div class="wrapper" style="background-color: #fefefe;">
+            <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #fefefe;" align="center">
+                <tbody>
+                    <tr>
+                        <td class="column" style="padding: 0;text-align: left;vertical-align: top;color: #353638;font-size: 14px;line-height: 21px;font-family: Merriweather,Georgia,serif;width: 600px;">
+                            <div class="image" style="font-size: 12px;font-style: normal;font-weight: 400;" align="center">
+                                <img class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top" style="display: block;border: 0;max-width: 480px;" src="cid:logo.png" alt="" width="240" height="186"/>
+                            </div>
+                            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;">
+                                <p class="size-17" style="Margin-top: 20px;Margin-bottom: 20px;font-size: 17px;line-height: 26px;text-align: center;">Hello
+                                    {{name}}</p>
+                                <p class="size-17" style="Margin-top: 20px;Margin-bottom: 20px;font-size: 17px;line-height: 26px;text-align: center;">The payment for the ride amounts to {{totalRent}}<br>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width:50%;min-width:400px;position:relative;margin:auto ">
+                  <div style="width:53%;min-width:400px;margin:auto"><h2 style="position:relative;margin:auto;text-align:center;margin:15px;color:white;background-color:#37474f">
+                    Invoice details</h2></div>
+                    <tbody>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">Booking ID</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{bookingID}}</td>
+                    </tr>
+                      <tr style="border:solid 1px #666">
+                        <td style="width:50%;padding:10px;text-align:right">Renter Name</td>
+                        <td style="width:50%;padding:10px;text-align:left">{{renterName}}</td>
+                      </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">From</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{fromDateTime}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">To</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{toDateTime}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">Booking date</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{bookingDate}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">Booking Status</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{status}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">For vehicle</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{carMakeModel}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right;">Total income</td>
+                      <td style="width:50%;padding:10px;text-align:left;">{{totalRent}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right">Deposit amount</td>
+                      <td style="width:50%;padding:10px;text-align:left">{{deposit}}</td>
+                    </tr>
+                    <tr style="border:solid 1px #666">
+                      <td style="width:50%;padding:10px;text-align:right">Pickup Location</td>
+                      <td style="width:50%;padding:10px;text-align:left">{{pickupLoc}}</td>
+                    </tr>
+                </tbody>
+              </table>
+            <p style="text-align:center;margin-top:20px"><a style="width:300px;text-align:center"href="www.goryd.in">For further inquiry, visit our website</a></p>
+          </div>
+        </div>
+
+
+            <div>
+                <div style="background-color:#212121;color:white;">
+                    <div style="padding:5px" align="center">
+                        Copyright &copy; Eneo Technologies Pvt. Ltd. All rights reserved.
+                    </div>
+                    <div style="padding:5px; font-size: 12px;" align="center">
+                        Have a question? Email us at
+                        <a href="mailto:support@goryd.in" style="color:white;">support@goryd.in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

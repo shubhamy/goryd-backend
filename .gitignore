@@ -1,0 +1,9 @@
+**/*.pyc
+**/migrations/**/*
+!**/migrations/__init__.py
+*.sqlite3
+.coverage
+cover
+static_root
+media_root
+backend/set.py
